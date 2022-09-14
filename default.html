@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Wordificator-9000</title>
+        <link rel="stylesheet" type="text/css" href="default.css"/>
+        <link rel="shortcut icon" href="./assets/icon.png"> 
+    </head>
+    <body>
+        <h1>Wordificator-9000</h1>
+        <p>A helper for word games...</p>
+        <div>
+            <textarea rows="7" cols="40" id="pattern-textbox"></textarea>
+            <button id="search-button" class="default-button">
+                <span class="button-label">Search</span>
+                <span id="spinner" class="spinner"></span></button>
+            <button id="clear-button" class="regular-button">Clear</button>
+            <div class="hint">
+                Enter the pattern for the word as a list of: number of letters, a colon,
+                and the list of possible letters. For example, "2:abc 3:fiir" means a
+                5 letter word starting with 2 letters that can be a, b, or c, then
+                3 letters that can be f, i or r, and there may be two i's.
+            </div>
+        </div>
+        <ul id="result-list"></ul>
+        <script type="module" src="./default.js"></script>
+    </body>
+</html>

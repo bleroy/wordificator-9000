@@ -1,0 +1,85 @@
+html {
+    background-color: white;
+    color: black;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.hint {
+    color: lightgray;
+    font-size: small;
+    display: block;
+}
+
+#pattern-textbox {
+    font-size: large;
+    display: inline-block;
+    height: 140px;
+}
+
+.default-button {
+    font-size: large;
+    font-weight: bold;
+    padding: 2em;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 150px;
+    border: solid 2px;
+    border-radius: 4px;
+}
+
+.regular-button {
+    font-size: large;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 150px;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0);
+    }
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.spinner {
+    position: relative;
+    top: 0;
+    left: -50%;
+    opacity: 0;
+    transition: opacity linear 0.1s;
+}
+
+.spinner::before {
+    animation: spinner 2s linear infinite;
+    border: solid 3px #222;
+    border-bottom-color: #ef6565;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    will-change: transform;
+}
+
+#result-list {
+    list-style: none;
+    padding: 0;
+}
+
+#result-list li {
+    border: solid 1px #888;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 2px 3px;
+    padding: 0 3px;
+}
