@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', e => {
         searchButton.disabled = true;
         spinner.style.opacity = 1;
         const pattern = patternTextbox.value
+            .toLowerCase()
             .split(/\s/)
             .map(line => {
                 const split = line.split(':');
